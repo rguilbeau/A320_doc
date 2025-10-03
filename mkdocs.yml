@@ -1,0 +1,46 @@
+site_name: A320 - Home cockpit
+site_url: https://rguilbeau.github.io/A320_doc
+
+nav:
+  - Home: index.md
+  - Architecture:
+    - architecture/global_view.md
+    - architecture/can_bus.md
+  - Fabrication:
+    - build/build_settings.md
+  - Installation:
+    - install/drivers.md
+  - Documentation:
+    - doc/maintain_documentation.md
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.path
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  generator: false
+
+extra_css:
+  - style.css
+
+plugins:
+  - search
+  - drawio
