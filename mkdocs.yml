@@ -36,6 +36,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 extra:
+  version:
+    provider: mike
   generator: false
 
 extra_css:
